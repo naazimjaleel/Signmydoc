@@ -1,0 +1,137 @@
+{
+  "users": [],
+  "invoices": [
+    {
+      "title": "New Invoice",
+      "type": "Invoice",
+      "date": "2025-03-06T09:07:52.120Z",
+      "data": {
+        "firstName": "",
+        "lastName": "",
+        "email": "",
+        "address": "",
+        "projectDescription": "",
+        "items": [
+          {
+            "name": "Home Page",
+            "rate": 5600,
+            "quantity": 1
+          }
+        ]
+      },
+      "template": "classic",
+      "isAIGenerated": true,
+      "id": "1741252072937"
+    },
+    {
+      "title": "New Invoice",
+      "type": "Invoice",
+      "date": "2025-03-06T09:08:01.668Z",
+      "data": {
+        "firstName": "",
+        "lastName": "",
+        "email": "",
+        "address": "",
+        "projectDescription": "",
+        "items": [
+          {
+            "name": "Home Page",
+            "rate": 5600,
+            "quantity": 1
+          }
+        ]
+      },
+      "template": "classic",
+      "isAIGenerated": true,
+      "id": "1741252081687"
+    },
+    {
+      "title": "New Invoice",
+      "type": "Invoice",
+      "date": "2025-03-06T09:09:44.116Z",
+      "data": {
+        "firstName": "",
+        "lastName": "",
+        "email": "",
+        "address": "",
+        "projectDescription": "",
+        "items": [
+          {
+            "name": "Home Page",
+            "rate": 5600,
+            "quantity": 1
+          }
+        ]
+      },
+      "template": "classic",
+      "isAIGenerated": true,
+      "id": "1741252184332"
+    },
+    {
+      "title": "dzvs",
+      "type": "Invoice",
+      "date": "2025-03-06T09:31:01.272Z",
+      "data": {
+        "firstName": "sf",
+        "lastName": "svv",
+        "email": "naazim.e.c@gmail.com",
+        "address": "",
+        "projectDescription": "dzvs",
+        "items": [
+          {
+            "name": "Home Page",
+            "rate": 5600,
+            "quantity": 1
+          }
+        ]
+      },
+      "template": "classic",
+      "isAIGenerated": true,
+      "id": "1741253461286"
+    },
+    {
+      "title": "New Invoice",
+      "type": "Invoice",
+      "date": "2025-03-06T09:33:01.026Z",
+      "data": {
+        "firstName": "",
+        "lastName": "",
+        "email": "",
+        "address": "",
+        "projectDescription": "",
+        "items": [
+          {
+            "name": "Home Page",
+            "rate": 5600,
+            "quantity": 1
+          }
+        ]
+      },
+      "template": "classic",
+      "isAIGenerated": true,
+      "id": "1741253581049"
+    },
+    {
+      "title": "4 page design suing figma\n",
+      "type": "Invoice",
+      "date": "2025-03-06T09:44:59.483Z",
+      "data": {
+        "firstName": "",
+        "lastName": "",
+        "email": "",
+        "address": "",
+        "projectDescription": "4 page design suing figma\n",
+        "items": [
+          {
+            "name": "Home Page",
+            "rate": 5600,
+            "quantity": 1
+          }
+        ]
+      },
+      "template": "classic",
+      "isAIGenerated": true,
+      "id": "1741254300077"
+    }
+  ]
+}
