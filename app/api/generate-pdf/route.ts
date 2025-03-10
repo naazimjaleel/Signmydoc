@@ -1,19 +1,20 @@
 import { NextResponse } from 'next/server';
-import { renderToString } from 'react-dom/server';
 
 export async function POST(req: Request) {
   try {
     const { template, invoiceData } = await req.json();
-    let renderedTemplate = '';
-
-    // Simplified template rendering for now
-    renderedTemplate = `<div>${JSON.stringify(invoiceData)}</div>`;
-
-    return NextResponse.json({ html: renderedTemplate });
+    
+    // Temporary simplified response
+    return NextResponse.json({ 
+      success: true,
+      message: "PDF generation endpoint reached",
+      data: { template, invoiceData }
+    });
+    
   } catch (error) {
-    console.error('Error generating PDF:', error);
+    console.error('Error:', error);
     return NextResponse.json(
-      { error: 'Failed to generate PDF' },
+      { error: 'Failed to process request' },
       { status: 500 }
     );
   }
