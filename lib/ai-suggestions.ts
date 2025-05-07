@@ -15,7 +15,6 @@ interface Suggestion {
 }
 
 export async function createUserPersona(description: string): Promise<UserPersona> {
-  // This would use OpenAI/other AI service in production
   const keywords = description.toLowerCase();
   
   // Example: "I am a freelance graphic designer specializing in logo design and branding for startups."
@@ -55,24 +54,21 @@ export async function suggestInvoiceItems(
     })
 
     if (!response.ok) {
-      throw new Error('AI analysis failed')
+      throw new Error('Analysis failed')
     }
 
     const data = await response.json()
     return data.items
 
   } catch (error) {
-    console.error('Error getting AI suggestions:', error)
-    
-    // Fallback to basic analysis if AI fails
+    console.error('Error getting suggestions:', error)
     return basicAnalysis(projectDescription, userPersona)
   }
 }
 
-// Fallback function using basic keyword matching
 function basicAnalysis(
   projectDescription: string,
-  userPersona: UserPersona | undefined
+  userPersona: UserPersona
 ): Suggestion[] {
   const keywords = projectDescription.toLowerCase()
   const suggestions: Suggestion[] = []
@@ -126,23 +122,21 @@ function basicAnalysis(
         description: 'Unique illustrations to enhance visual storytelling and brand identity'
       })
     }
-
-    // Check for copywriting
-    if (keywords.includes('copy') || keywords.includes('writing')) {
-      suggestions.push({
-        name: 'Professional Copywriting',
-        rate: defaultRates['Copywriting'] * pageCount,
-        description: `Engaging content writing for ${pageCount} pages including SEO optimization`
-      })
-    }
-
-    // Add responsive design as a standard
-    suggestions.push({
-      name: 'Responsive Design Implementation',
-      rate: baseRate * 0.3,
-      description: 'Making the website fully responsive across all devices and screen sizes'
-    })
   }
+
+  // Add basic project setup
+  suggestions.push({
+    name: 'Project Setup & Planning',
+    rate: 500,
+    description: 'Initial project setup, requirements gathering, and planning phase'
+  })
+
+  // Add testing
+  suggestions.push({
+    name: 'Testing & Quality Assurance',
+    rate: 600,
+    description: 'Comprehensive testing and quality assurance'
+  })
 
   return suggestions
 } 
