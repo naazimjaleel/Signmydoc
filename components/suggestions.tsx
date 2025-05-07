@@ -3,7 +3,7 @@
 import { useState, useEffect } from 'react'
 import { Button } from "@/components/ui/button"
 import { Sparkles } from "lucide-react"
-import { suggestInvoiceItems } from '@/lib/ai-suggestions'
+import { suggestInvoiceItems } from '@/lib/suggestions'
 import type { InvoiceData } from './invoice-form'
 
 interface SuggestionsProps {

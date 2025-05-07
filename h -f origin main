@@ -1,0 +1,5 @@
+[33mcommit d3cfba00e99bd08645fdae8e6cd49fc01250357e[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmain[m[33m, [m[1;31morigin/main[m[33m)[m
+Author: naazimjaleel <naazim.e.c@gmailcom>
+Date:   Wed May 7 23:24:32 2025 +0530
+
+    Update import path in signup complete page to use new suggestions module
