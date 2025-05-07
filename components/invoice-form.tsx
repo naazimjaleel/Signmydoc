@@ -22,7 +22,8 @@ import {
 } from "@/components/ui/popover"
 import { LoadScript, Autocomplete } from "@react-google-maps/api"
 import { usePlacesWidget } from "react-google-autocomplete"
-import { suggestInvoiceItems } from "@/lib/ai-suggestions"
+import { suggestInvoiceItems } from "@/lib/suggestions"
+import { Suggestions } from "@/components/suggestions"
 import { AddressInput } from "@/components/address-input"
 
 export type InvoiceData = {

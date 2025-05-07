@@ -6,13 +6,13 @@ import { Sparkles } from "lucide-react"
 import { suggestInvoiceItems } from '@/lib/ai-suggestions'
 import type { InvoiceData } from './invoice-form'
 
-interface AISuggestionsProps {
+interface SuggestionsProps {
   projectDescription: string;
   userPersona: any; // We'll get this from user context/state
   onAddItem: (item: { name: string; rate: number; quantity: number }) => void;
 }
 
-export function AISuggestions({ projectDescription, userPersona, onAddItem }: AISuggestionsProps) {
+export function Suggestions({ projectDescription, userPersona, onAddItem }: SuggestionsProps) {
   const [suggestions, setSuggestions] = useState<any[]>([]);
   const [loading, setLoading] = useState(false);
 
@@ -40,7 +40,7 @@ export function AISuggestions({ projectDescription, userPersona, onAddItem }: AI
     <div className="mt-4">
       <div className="flex items-center gap-2 mb-3">
         <Sparkles className="h-4 w-4 text-purple-600" />
-        <h3 className="font-medium">AI Suggestions</h3>
+        <h3 className="font-medium">Smart Suggestions</h3>
       </div>
       
       {loading ? (
