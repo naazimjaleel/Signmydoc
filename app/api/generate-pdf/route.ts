@@ -1,6 +1,4 @@
 import { NextResponse } from 'next/server';
-import { renderToString } from 'react-dom/server';
-import React from 'react';
 import { ModernTemplate } from '@/components/templates/modern-template';
 
 export async function POST(req: Request) {
@@ -10,19 +8,23 @@ export async function POST(req: Request) {
 
     switch (template) {
       case "modern":
-        renderedTemplate = renderToString(
-          React.createElement(ModernTemplate, { invoiceData })
-        );
-        break;
+        // Return the template data directly
+        return NextResponse.json({ 
+          template: 'modern',
+          data: invoiceData 
+        });
       case "minimal":
-        // Add similar rendering for minimal template if needed
-        break;
+        // Add similar handling for minimal template if needed
+        return NextResponse.json({ 
+          template: 'minimal',
+          data: invoiceData 
+        });
       default:
-        // Handle default case
-        break;
+        return NextResponse.json(
+          { error: 'Invalid template' },
+          { status: 400 }
+        );
     }
-
-    return NextResponse.json({ html: renderedTemplate });
   } catch (error) {
     console.error('Error generating PDF:', error);
     return NextResponse.json(
