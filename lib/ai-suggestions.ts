@@ -42,7 +42,7 @@ export async function suggestInvoiceItems(
   userPersona: UserPersona
 ): Promise<Suggestion[]> {
   try {
-    const response = await fetch('/api/ai/analyze', {
+    const response = await fetch('/api/analyze', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
