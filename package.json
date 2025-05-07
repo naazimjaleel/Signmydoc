@@ -12,6 +12,11 @@
     "@auth/prisma-adapter": "^2.8.0",
     "@hookform/resolvers": "^3.9.1",
     "@prisma/client": "^6.4.1",
+    "@protobufjs/aspromise": "^1.1.2",
+    "@protobufjs/base64": "^1.1.2",
+    "@protobufjs/codegen": "^2.0.4",
+    "@protobufjs/fetch": "^1.1.0",
+    "@protobufjs/path": "^1.1.2",
     "@radix-ui/react-accordion": "^1.2.2",
     "@radix-ui/react-alert-dialog": "^1.1.4",
     "@radix-ui/react-aspect-ratio": "^1.1.1",
@@ -45,6 +50,7 @@
     "cmdk": "1.0.4",
     "date-fns": "^3.3.1",
     "embla-carousel-react": "8.5.1",
+    "esbuild": "^0.25.4",
     "firebase": "^11.4.0",
     "fs": "latest",
     "input-otp": "1.4.1",
@@ -74,6 +80,7 @@
     "@types/react": "^18",
     "@types/react-dom": "^18",
     "postcss": "^8",
+    "prisma": "^6.7.0",
     "tailwindcss": "^3.4.17",
     "typescript": "^5"
   }
