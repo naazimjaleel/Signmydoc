@@ -1,6 +1,7 @@
 import { NextResponse } from 'next/server';
 import { renderToString } from 'react-dom/server';
-import ModernTemplate from '@/components/templates/ModernTemplate'; // Ensure this path is correct
+import React from 'react';
+import { ModernTemplate } from '@/components/templates/modern-template';
 
 export async function POST(req: Request) {
   try {
@@ -10,7 +11,7 @@ export async function POST(req: Request) {
     switch (template) {
       case "modern":
         renderedTemplate = renderToString(
-          <ModernTemplate invoiceData={invoiceData} />
+          React.createElement(ModernTemplate, { invoiceData })
         );
         break;
       case "minimal":
